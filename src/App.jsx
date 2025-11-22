@@ -9,6 +9,7 @@ import {
 import confetti from 'canvas-confetti';
 
 const REPO_URL = "https://github.com/Dhruvdesai793/Kyu-Nahi-Ho-Rahi-Padhai";
+const BASE_PATH = import.meta.env.BASE_URL;
 
 const SOCIALS = [
   { name: "GitHub", icon: <Github size={18} />, url: "https://github.com/Dhruvdesai793", color: "hover:text-white", bg: "hover:bg-black" },
@@ -22,20 +23,18 @@ const MENTORS = {
     bg: "bg-gradient-to-b from-red-950 via-black to-black",
     button: "bg-red-600 hover:bg-red-700 shadow-red-500/30",
     accent: "text-red-500",
-    gif: "/meme.gif",
-    audio: "/scolding.mp3",
+    gif: `${BASE_PATH}meme.gif`,
+    audio: `${BASE_PATH}scolding.mp3`,
     catchphrase: "KYU NAHI HO RAHI PADHAI?!",
-    //fallbackGif: "https://media.tenor.com/K2qJ9dcF5uUAAAAC/alakh-pandey-physics-wallah.gif"
   },
   saleem: {
     name: "Saleem Sir",
     bg: "bg-gradient-to-b from-orange-950 via-black to-black",
     button: "bg-orange-600 hover:bg-orange-700 shadow-orange-500/30",
     accent: "text-yellow-400",
-    gif: "/saleem.gif",
-    audio: "/saleem_audio.mp3",
+    gif: `${BASE_PATH}saleem.gif`,
+    audio: `${BASE_PATH}saleem_audio.mp3`,
     catchphrase: "PADHLE B K L !!!",
-    //fallbackGif: "https://media1.tenor.com/m/8sTm-C0sWqEAAAAd/saleem-sir-pw-pw.gif"
   }
 };
 
@@ -79,7 +78,8 @@ function App() {
   }, [mode]);
 
   const playAudio = () => {
-    const audio = new Audio(MENTORS[mentor].audio);
+    const audioPath = MENTORS[mentor].audio;
+    const audio = new Audio(audioPath);
     audio.volume = 1.0;
     controls.start({ x: [-5, 5, -5, 5, 0], transition: { duration: 0.4 } });
     
@@ -87,7 +87,7 @@ function App() {
     const randomRoast = roasts[Math.floor(Math.random() * roasts.length)];
     triggerFlashText(randomRoast);
     
-    audio.play().catch(() => console.log("Audio missing"));
+    audio.play().catch((e) => console.log("Audio missing at path:", audioPath, e));
     if (navigator.vibrate) navigator.vibrate([100, 50, 100, 50, 200]);
   };
 
@@ -269,7 +269,6 @@ function App() {
               <div className="relative group w-full max-w-2xl aspect-video bg-black rounded-xl border-2 border-white/10 overflow-hidden shadow-[0_0_30px_rgba(0,0,0,0.5)]">
                 <img 
                   src={MENTORS[mentor].gif} 
-                  // REMOVED: onError={(e) => e.target.src = MENTORS[mentor].fallbackGif}
                   className="w-full h-full object-contain opacity-90 group-hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black via-black/80 to-transparent p-4 md:p-6 z-20">
