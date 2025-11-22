@@ -25,7 +25,7 @@ const MENTORS = {
     gif: "/meme.gif",
     audio: "/scolding.mp3",
     catchphrase: "KYU NAHI HO RAHI PADHAI?!",
-    fallbackGif: "https://media.tenor.com/K2qJ9dcF5uUAAAAC/alakh-pandey-physics-wallah.gif"
+    //fallbackGif: "https://media.tenor.com/K2qJ9dcF5uUAAAAC/alakh-pandey-physics-wallah.gif"
   },
   saleem: {
     name: "Saleem Sir",
@@ -35,7 +35,7 @@ const MENTORS = {
     gif: "/saleem.gif",
     audio: "/saleem_audio.mp3",
     catchphrase: "PADHLE B K L !!!",
-    fallbackGif: "https://media1.tenor.com/m/8sTm-C0sWqEAAAAd/saleem-sir-pw-pw.gif"
+    //fallbackGif: "https://media1.tenor.com/m/8sTm-C0sWqEAAAAd/saleem-sir-pw-pw.gif"
   }
 };
 
