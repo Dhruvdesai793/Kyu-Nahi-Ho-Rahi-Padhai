@@ -25,7 +25,7 @@ const MENTORS = {
     gif: "/meme.gif",
     audio: "/scolding.mp3",
     catchphrase: "KYU NAHI HO RAHI PADHAI?!",
-    fallbackGif: "https://media.tenor.com/K2qJ9dcF5uUAAAAC/alakh-pandey-physics-wallah.gif"
+    //fallbackGif: "https://media.tenor.com/K2qJ9dcF5uUAAAAC/alakh-pandey-physics-wallah.gif"
   },
   saleem: {
     name: "Saleem Sir",
@@ -35,7 +35,7 @@ const MENTORS = {
     gif: "/saleem.gif",
     audio: "/saleem_audio.mp3",
     catchphrase: "PADHLE B K L !!!",
-    fallbackGif: "https://media1.tenor.com/m/8sTm-C0sWqEAAAAd/saleem-sir-pw-pw.gif"
+    //fallbackGif: "https://media1.tenor.com/m/8sTm-C0sWqEAAAAd/saleem-sir-pw-pw.gif"
   }
 };
 
@@ -269,7 +269,7 @@ function App() {
               <div className="relative group w-full max-w-2xl aspect-video bg-black rounded-xl border-2 border-white/10 overflow-hidden shadow-[0_0_30px_rgba(0,0,0,0.5)]">
                 <img 
                   src={MENTORS[mentor].gif} 
-                  onError={(e) => e.target.src = MENTORS[mentor].fallbackGif}
+                  // REMOVED: onError={(e) => e.target.src = MENTORS[mentor].fallbackGif}
                   className="w-full h-full object-contain opacity-90 group-hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black via-black/80 to-transparent p-4 md:p-6 z-20">
