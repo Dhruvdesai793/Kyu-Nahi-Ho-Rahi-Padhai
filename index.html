@@ -2,12 +2,58 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+
+    <!-- Favicon (Vite will handle BASE_URL automatically) -->
+    <link rel="icon" type="image/png" href="./icon.png" />
+
+    <!-- Mobile Responsive -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Padhai Kyu nhi ho rhi?</title>
+
+    <!-- Title -->
+    <title>Kyu Nahi Ho Rahi Padhai?</title>
+
+    <!-- SEO -->
+    <meta name="description" content="A ruthless meme-powered productivity tool that roasts you until you study. Built by Dhruv Desai." />
+    <meta name="keywords" content="study, motivation, productivity, meme app, roast app, pomodoro, focus app" />
+
+    <!-- Theme Colors -->
+    <meta name="theme-color" content="#000000" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Kyu Nahi Ho Rahi Padhai?" />
+    <meta property="og:description" content="Get roasted, survive the timer, and finally STUDY. No excuses." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="./icon.png" />
+    <meta property="og:url" content="https://dhruvdesai793.github.io/Kyu-Nahi-Ho-Rahi-Padhai/" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Kyu Nahi Ho Rahi Padhai?" />
+    <meta name="twitter:description" content="A brutal roast-based study app that forces you to study." />
+    <meta name="twitter:image" content="./icon.png" />
+
+    <!-- Fonts (Optional clean pairing) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Prevent layout jump while loading -->
+    <style>
+      body {
+        background: #000;
+        margin: 0;
+        font-family: Inter, sans-serif;
+      }
+    </style>
   </head>
+
   <body>
     <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+
+    <!-- Vite Entry -->
+    <script type="module" src="./src/main.jsx"></script>
   </body>
 </html>
