@@ -1,10 +1,4 @@
-Great — here are the next items you asked for: **README** + **X Post**.
 
----
-
-# ✅ **README.md (clean, professional, and fun)**
-
-````
 # 📚 Kyu-Nahi-Ho-Rahi-Padhai?  
 A brutally honest productivity tool disguised as a meme app.  
 Built with React + Vite + Tailwind + Framer Motion.
@@ -102,6 +96,5 @@ If you like the project, **drop a star⭐** on the repo to support.
 * LinkedIn: [https://linkedin.com/in/dhruv-desai-b0779b370](https://linkedin.com/in/dhruv-desai-b0779b370)
 * X (Twitter): [https://x.com/blixture793](https://x.com/blixture793)
 
-```
 
----
+
